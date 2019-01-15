@@ -8,7 +8,7 @@ video = io.BytesIO(video)
 def index():
     return render_template('index.html', title='Home')
 
-@app.route('/test')
+@app.route('/test.mp4')
 def test():
     return send_file(video, mimetype='video/mp4')
     
