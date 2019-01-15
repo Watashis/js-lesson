@@ -9,7 +9,7 @@ def index():
 
 @app.route('/test')
 def test():
-    video = requests.get('https://vjs.zencdn.net/v/oceans.mp4', stream=True).raw
+    video = requests.get('https://vjs.zencdn.net/v/oceans.mp4', stream=True).content
     video = io.BytesIO(video)
     return send_file(video, mimetype='video/mp4')
     
